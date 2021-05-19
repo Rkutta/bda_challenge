@@ -22,7 +22,7 @@ def main(sc):
         for line in reader:
             if line[9] in CAT_CODES:
                 yield (line[0], int(CAT_GROUP[line[9]]))
-        rddD = rddPlaces.mapPartitionsWithIndex(filterPOIs) \
+    rddD = rddPlaces.mapPartitionsWithIndex(filterPOIs) \
             .cache()    
     # Compute number of stores per group
     storeGroup = dict(rddD.collect())
