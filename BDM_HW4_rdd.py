@@ -11,8 +11,8 @@ def main(sc):
     Transfer our code from the notebook here, however, remember to replace
     the file paths with the ones provided in the problem description.
     '''
-    rddPlaces = sc.textFile('hdfs:///tmp/bdm/core-places-nyc.csv')
-    rddPattern = sc.textFile('hdfs:///tmp/bdm/weekly-patterns-nyc-2019-2020/*')
+    rddPlaces = sc.textFile('/data/share/bdm/core-places-nyc.csv')
+    rddPattern = sc.textFile('/data/share/bdm/weekly-patterns-nyc-2019-2020/*')
     OUTPUT_PREFIX = sys.argv[1]
     CAT_CODES = {'452210','452311','455120','722410','722511','722513','446110','446191','311811','722515','455210','445220','445230','445291','445292','445299','445110'}
     CAT_GROUP = {'452210':0,'452311':0,'445120':1,'722410':2,'722511':3,'722513':4,'446110':5,'446191':5,'311811':6,'722515':6,'445210':7,'445220':7,'445230':7,'445291':7,'445292':7,'445299':7,'445110':8}
